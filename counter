@@ -1,0 +1,30 @@
+var socket = io.connect("http://localhost:3001");
+        socket.on("new_order",function (data){
+            if (data.RefreshValue==1)
+                location.replace("Update_Question.php");
+        });
+
+        if(localStorage.getItem("counter")){
+            if(localStorage.getItem("counter") <= 0){
+                var value = 30;
+            }else{
+                var value = localStorage.getItem("counter");
+            }
+        }else{
+            var value = 30;
+        }
+        document.getElementById('divCounter').innerHTML = value;
+
+        var counter = function (){
+            if(value <= 0){
+                document.location.replace("Update_Question.php");
+                localStorage.setItem("counter", 30);
+                value = 30;
+            }else{
+                value = parseInt(value)-1;
+                localStorage.setItem("counter", value);
+            }
+            document.getElementById('divCounter').innerHTML = value;
+        };
+
+        var interval = setInterval(function (){counter();}, 1000);s

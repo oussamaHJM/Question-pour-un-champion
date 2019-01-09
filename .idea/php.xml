@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="C:\xampp\htdocs\Projet_tuteure" />
+      <path value="$PROJECT_DIR$/Php_socket.io/vendor/composer" />
+      <path value="$PROJECT_DIR$/Php_socket.io/vendor/wisembly/elephant.io" />
+      <path value="$PROJECT_DIR$/Php_socket.io/vendor/psr/log" />
+    </include_path>
+  </component>
+</project>
